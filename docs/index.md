@@ -22,6 +22,12 @@ git clone https://github.com/ssciwr/python-testing-intro.git
 cd python-testing-intro
 ```
 
+To install the required Python libraries:
+
+```
+python -m pip install -r requirements.txt
+```
+
 To run the tests:
 
 ```
