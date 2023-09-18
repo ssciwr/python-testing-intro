@@ -1,0 +1,4 @@
+theme: jekyll-theme-slate
+title: "Introduction to Python Testing"
+description: "SSC Compact Course"
+exclude: [notebooks, tests]
