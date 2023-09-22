@@ -18,6 +18,6 @@ def test_area_of_square_invalid():
         area_of_square("5")
 
 
-@pytest.mark.parametrize("length,area", [(1.0, 1.0), (0.2, 0.04), (1.2, 1.44)])
+@pytest.mark.parametrize(("length", "area"), [(1.0, 1.0), (0.2, 0.04), (1.2, 1.44)])
 def test_area_of_square_floats(length, area):
     assert area_of_square(length) == pytest.approx(area)
