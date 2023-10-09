@@ -1,4 +1,4 @@
-from area import area_of_square
+from area import area_of_square, area_of_rectangle
 import pytest
 
 
@@ -35,3 +35,11 @@ def test_area_of_square_floats(length, area):
 @pytest.mark.parametrize(("length", "area"), [(0, 0), (1, 1), (2, 4), (8, 64)])
 def test_area_of_square_ints(length, area):
     assert area_of_square(length) == area
+
+
+@pytest.mark.parametrize("length", [1, 4, 7, 4.5])
+@pytest.mark.parametrize("width", [1.123, 5.34534, 2, 77])
+def test_area_of_rectangle_swap_width_length(length, width):
+    assert area_of_rectangle(length, width) == pytest.approx(
+        area_of_rectangle(width, length)
+    )
