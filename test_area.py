@@ -12,12 +12,16 @@ def test_area_of_square():
     assert area_of_square(0.2) == pytest.approx(0.04)
 
 
-@pytest.mark.parametrize(
-    "length", [-2, "5", [1, 2]], ids=["negative", "string", "list of numbers"]
-)
-def test_area_of_square_invalid(length):
+@pytest.mark.parametrize("length", [-2, -5.6677, -1e-12])
+def test_area_of_square_invalid_value(length):
+    with pytest.raises(ValueError):
+        # this asserts that the code inside here raises a ValueError
+        area_of_square(length)
+
+
+@pytest.mark.parametrize("length", ["5", [1, 2]], ids=["string", "list of numbers"])
+def test_area_of_square_invalid_type(length):
     with pytest.raises(TypeError):
-        # this asserts that the code inside here raises a TypeError
         area_of_square(length)
 
 
