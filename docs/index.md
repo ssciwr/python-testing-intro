@@ -9,7 +9,7 @@ tests.
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQl1EjcUZkcvWFLq1fuv4SZ7fwUXpzykNXo52r4xQm1i_4DoSQ0QApHBE2koXiHJxecLKvlNm0b15Gb/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
-[download slides as pdf](https://github.com/ssciwr/effective-software-testing/raw/main/docs/slides/slides.pdf) | [download course description as pdf](https://backend.ssc.uni-heidelberg.de/sites/default/files/documents/2023-09/python-testing.pdf)
+[download slides as pdf](https://github.com/ssciwr/effective-software-testing/raw/main/docs/slides/slides.pdf)
 
 ## Sample code
 
