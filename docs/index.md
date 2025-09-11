@@ -11,6 +11,14 @@ tests.
 
 [download slides as pdf](https://github.com/ssciwr/effective-software-testing/raw/main/docs/slides/slides.pdf)
 
+## Live code
+
+During this course, the live coding will be available here:
+
+https://github.com/ssciwr/python-testing-intro-live
+
+This can be useful to keep open during the course to be able to view the current code on your computer if the slides are currently being displayed on the main screen in the course.
+
 ## Sample code
 
 A sample project including a test suite is provided at [github.com/ssciwr/python-testing-intro](https://github.com/ssciwr/python-testing-intro)
