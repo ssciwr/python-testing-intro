@@ -551,11 +551,7 @@ def test_tmp_file(named_tmp_file):
 
 # Mostly write unit tests
 
-![bg right:40%](testing_pyramid.svg)
-
-- **Unit tests** — the core of your test suite: fast, robust, precise
-- **Integration tests** — compared to unit tests: slower, more brittle, less precise
-- **GUI / manual tests** — compared to integration tests: slower, more brittle, less precise
+![width:850px](testing_pyramid.svg)
 
 ---
 
