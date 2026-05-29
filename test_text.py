@@ -30,8 +30,10 @@ def test_count_characters(test_file_generator, n_lines):
 def test_count_bytes_bad():
     # this is not a good test: it requires internet access, and will break whenever this file is modified
     assert (
-        count_bytes("https://github.com/ssciwr/python-testing-intro/raw/main/README.md")
-        == 1185
+        count_bytes(
+            "https://github.com/ssciwr/python-testing-intro/raw/main/requirements.txt"
+        )
+        == 16
     )
 
 
