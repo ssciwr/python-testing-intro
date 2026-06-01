@@ -8,7 +8,7 @@ description: SSC Compact Course
 
 <!-- _class: title -->
 <!-- _paginate: false -->
-<!-- _footer: "2024.11.26" -->
+<!-- _footer: "ssciwr.github.io/python-testing-intro &nbsp;&nbsp; 2026.02.09" -->
 
 # Introduction to Python Testing
 
@@ -27,7 +27,7 @@ description: SSC Compact Course
   - Write simple tests
   - Use temporary files in tests
   - Use fixtures to manage resources
-  - Parametrize tests
+  - Parameterized tests
   - Write tests in a Jupyter notebook
 - Best practices
   - How to write good tests
@@ -305,7 +305,7 @@ def test_exception():
 - Use the `@pytest.mark.parameterize` decorator
 
 ```python
-@pytest.mark.parametrize("length", [-2, -5.6677])
+@pytest.mark.parametrize("length", [-2, -5.67])
 def test_area_of_square_invalid_value(length):
     with pytest.raises(ValueError):
         area_of_square(length)
@@ -421,7 +421,7 @@ def test_colors(colors):
 - Use the `monkeypatch` fixture
 
 ```python
-def test_message_box(monkeypatch: MonkeyPatch):
+def test_message_box(monkeypatch):
 
     def do_nothing(*args, **kwargs):
         return
@@ -429,6 +429,24 @@ def test_message_box(monkeypatch: MonkeyPatch):
     monkeypatch.setattr(QMessageBox, "information", do_nothing)
     QMessageBox.information(None, "title", "text")
 ```
+
+---
+
+# Conda environment
+
+- For the next part we'll use the requests library to download files
+
+- To install it using conda
+
+  ```
+  conda install requests -c conda-forge
+  ```
+
+- Or alternatively install it using pip
+
+  ```
+  pip install requests
+  ```
 
 ---
 
@@ -444,7 +462,7 @@ def test_message_box(monkeypatch: MonkeyPatch):
 
 - To be robust we don't want the test to actually download a file
 
-- We can monkeypatch requests to instead return a test file
+- We can monkeypatch requests.get to instead return a test file
 
 ---
 
@@ -474,7 +492,7 @@ A big advantage of this over just manually running code in a cell to test things
 - Or alternatively install it using pip
 
   ```
-  pip install ipytest
+  pip install jupyterlab ipytest
   ```
 
 ---
@@ -489,7 +507,7 @@ A big advantage of this over just manually running code in a cell to test things
 
 - Write and run a test function
 
-- Use this fixture to write a test for the new function
+- Check what output you get when the test passes and fails
 
 ---
 
@@ -604,6 +622,52 @@ Why?
 
 <!-- _class: subtitle -->
 
+# Testing and AI
+
+---
+
+# Testing and AI
+
+- Many people now use AI to help them write code
+  - This could be via a chat interface, a command line tool, an IDE, or an agent
+- Note that AI is really good at giving you what you ask for
+  - Sometimes not so good at giving you what you need
+- Don't forget to ask for tests as well as code!
+  - This gives you a test suite basically for free
+- TDD (test-driven-development) can also work well with AI
+  - Describe the functionality to the AI
+  - Then ask it to write only the tests for this functionality
+  - You can then inspect the tests and confirm they are testing the behaviour you want
+  - Finally ask it to write the implementation
+
+---
+
+# Chat example: code only
+
+_"write a python function the calculates the area of a square"_
+
+![width:760px](chat_example_code_only.png)
+
+---
+
+# Chat example: code + tests
+
+_"write a python function the calculates the area of a square and include tests"_
+
+![width:1000px](chat_example_code_tests.png)
+
+---
+
+# Chat example: code + good tests
+
+_"write a python function the calculates the area of a square. include a parameterised pytest test suite that includes valid and invalid inputs"_
+
+![width:900px](chat_example_code_good_tests.png)
+
+---
+
+<!-- _class: subtitle -->
+
 # Summary
 
 ---
@@ -625,6 +689,7 @@ In this course we covered:
   - Write tests in a Jupyter notebook
 - Best practices
   - How to write good tests
+  - Testing and AI
 
 ---
 
