@@ -1,6 +1,7 @@
-from text import count_lines, count_characters, count_bytes
 import pytest
 import requests
+
+from text import count_bytes, count_characters, count_lines
 
 
 @pytest.fixture
@@ -8,8 +9,7 @@ def test_file_generator(tmp_path):
     def _test_file(n_lines):
         filename = tmp_path / "temp_file.txt"
         with open(filename, "w") as f:
-            for _ in range(n_lines):
-                f.write("hello\n")
+            f.writelines("hello\n" for _ in range(n_lines))
         return filename
 
     return _test_file
