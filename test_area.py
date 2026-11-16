@@ -1,5 +1,6 @@
-from area import area_of_square, area_of_rectangle
 import pytest
+
+from area import area_of_rectangle, area_of_square
 
 
 def test_area_of_square():
